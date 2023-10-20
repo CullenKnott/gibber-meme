@@ -29,7 +29,7 @@ const userSchema = new Schema(
       {
         user: {
           type: Schema.Types.ObjectId,
-          ref: 'User'
+          ref: "User",
         },
         status: Number,
         enums: [
@@ -37,8 +37,8 @@ const userSchema = new Schema(
           1, // 'requested'
           2, // 'pending'
           3, // 'friends'
-        ]
-      }
+        ],
+      },
     ],
     messages: [messageSchema],
   },
