@@ -20,6 +20,10 @@ const typeDefs = gql`
         user: Users
     }
     
+    type Query {
+        me: Users
+    }
+
     input addFriend {
         _id: ID!
         firstName: String!
@@ -33,8 +37,8 @@ const typeDefs = gql`
     type Mutation {
         addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        addMessages(newMessage: AddMessages!): User
-        removeMessage(messageId: ID!): User
+        addMessages(newMessage: AddMessages!): Users
+        removeMessage(messageId: ID!): Users
 
     }
 `;
